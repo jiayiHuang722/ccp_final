@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+
+.skip-link{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+a.skip-link:focus{
+  position:static;
+  width:auto;
+  height:auto;
+}
+header{
+  position: sticky;
+  padding: 15px;
+}
+
+
+
+.progress-bar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #333;
+}
+
+.progress-bar-inner{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: #FFCE00;
+  color: white;
+}
+
+
+body{
+    margin:5px;
+    padding:5px;
+    line-height:1.15;
+    font-family: 'Cairo', sans-serif;
+    background-color: #dcd9cd;
+ }
+  
+ h1,h2, h3{
+    font-weight: bold;
+    margin:15px 0px; 
+ }
+
+ h1{
+   font-size: 32px;
+ }
+
+ h2{
+    font-size: 20px;
+    position: relative;
+  }
+
+h3{
+    font-size: 14 px;
+  }
+
+h2:before{
+    content: "🧸";
+   margin-right: 20px
+}
+ul {
+  position: relative;
+}
+ ul li{
+  list-style: none;
+  text-align: center;
+ }
+
+ ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+ul:hover li a {
+  color: #0002;
+}
+
+ul li:hover a {
+  color: #000;
+  background: transparent;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+
+
+
+ main img{
+    width:100%;
+    padding:15px;
+    margin:0 auto;
+    display: block;
+    max-width: 250px;
+ }
+
+p{
+    font-size:18px;
+    line-height:2;
+    color:black;
+    margin-bottom: 10px;
+    padding:5px;
+ }
+ 
+ .media-gallery{
+   display: grid;
+   grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 20px;
+    justify-items: center; 
+
+ }
+ .media-gallery video {
+    width: 100%; 
+    height: auto; 
+    max-width: 250px;
+}
+.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.media-gallery > * {
+  border: 2px solid #ddd;
+  padding: 10px;
+  background-color: #fafafa; 
+  border-radius: 10px; 
+}
+
+@media (min-width: 768px) {
+  h1,h2, h3{
+    font-weight: bold;
+    margin:15px 0px; 
+ }
+
+ h1{
+   font-size: 42px;
+ }
+
+ h2{
+    font-size: 28px;
+    position: relative;
+  }
+
+h3{
+    font-size: 20px;
+  }
+
+  .progress-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #333;
+  }
+  
+  .progress-bar-inner{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: #FFCE00;
+    color: white;
+  }
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .media-gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+}
+ul {
+  position: relative;
+}
+ ul li{
+  list-style: none;
+  text-align: center;
+ }
+
+ ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 63px;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+ul:hover li a {
+  color: #0002;
+}
+
+ul li:hover a {
+  color: #000;
+  background: transparent;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+ul li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  width: 1800px;
+  height: 1800px;
+}
+
+ul li:nth-child(4n + 1) a:before {
+  background: #0470fe;
+}
+ul li:nth-child(4n + 2) a:before {
+  background: #ff7675;
+}
+ul li:nth-child(4n + 3) a:before {
+  background: #ffeaa7;
+}
+ul li:nth-child(4n + 4) a:before {
+  background: #a29bfe;
+}
+  nav li {
+    width: auto; 
+    padding: 15px;
+    margin: 15px;
+  }
+
+  main img {
+    max-width: 300px;
+  }
+
+  p{
+    font-size:14px;
+    line-height:2;
+    color:black;
+    /* background-color: bisque; */
+    margin-bottom: 10px;
+    padding:5px;
+ }
+
+  ul li{
+    font-size: 24px;
+ }
+ p{
+  font-size: 20px;
+ }
+}
+
+@media (min-width: 1024px) {
+  ul {
+    position: relative;
+  }
+   ul li{
+    list-style: none;
+    text-align: center;
+   }
+  
+   ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 63px;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  ul:hover li a {
+    color: #0002;
+  }
+  
+  ul li:hover a {
+    color: #000;
+    background: transparent;
+  }
+  
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+  }
+  ul li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+  }
+  
+  ul li:nth-child(4n + 1) a:before {
+    background: #0470fe;
+  }
+  ul li:nth-child(4n + 2) a:before {
+    background: #ff7675;
+  }
+  ul li:nth-child(4n + 3) a:before {
+    background: #ffeaa7;
+  }
+  ul li:nth-child(4n + 4) a:before {
+    background: #a29bfe;
+  }
+    nav li {
+      width: auto; 
+      padding: 15px;
+      margin: 15px;
+    }
+  
+    main img {
+      max-width: 300px;
+    }
+  
+    p {
+      font-size: 24px;
+    }
+  
+    ul li{
+      font-size: 24px;
+   }
+  .media-gallery {
+      grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+  }
+}
